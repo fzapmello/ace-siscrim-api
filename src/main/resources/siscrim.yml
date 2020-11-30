@@ -1,0 +1,36 @@
+siscrim:
+  url: http://localhost:8081
+  rotas:
+    documentos: /documentos
+
+    unidade: /unidade
+
+    sujeito: /sujeito
+        obterMateriaisNaCargaDoSujeito: ${siscrim.rotas.sujeito}/{params}/materiais
+        obterDocumentosNaCargaDoSujeito: ${siscrim.rotas.sujeito}/{params}/documentos
+
+    material: /material
+        alterarDescricaoMaterial: ${siscrim.rotas.material}/{params}/descricao
+        obterLacreAtualMaterial: ${siscrim.rotas.material}/{params}/lacre
+        deslacrarMaterialPorCodigo: ${siscrim.rotas.material}/{params}/lacre
+        lacrarMaterialPorCodigo: ${siscrim.rotas.material}/{params}/lacree
+
+    funcionario: /funcionario
+        listarFuncionarios: ${siscrim.rotas.funcionario}
+        obterFuncionario: ${siscrim.rotas.funcionario}/{codigoFuncionario}
+        obterFuncionarioLogado: ${siscrim.rotas.funcionario}/logado
+        obterRegistrosAgendaFuncionario: ${siscrim.rotas.funcionario}/agenda-funcionario
+        cadastrarRegistroAgendaFuncionario: ${siscrim.rotas.funcionario}/cadastrar-agenda-funcionario
+        alterarRegistroAgendaFuncionario: ${siscrim.rotas.funcionario}/alterar-agenda-funcionario
+
+     objeto-exame: /objeto-exame
+       obterObjetoExame: ${siscrim.rotas.objeto-exame}/{codigoObjetoExame}
+       excluirObjetoExame: ${siscrim.rotas.objeto-exame}/{codigoObjetoExame}
+
+    objeto-exame-tipo: /objeto-exame-tipo
+      listarTiposObjetoExame: ${siscrim.rotas.objeto-exame-tipo}
+      obterObjetoExameTipo: ${siscrim.rotas.objeto-exame-tipo}/{codigoObjetoExameTipo}
+
+    objeto-exame-unidade-medida: /objeto-exame-unidade-medida
+      listarTiposObjetoExame: ${siscrim.rotas.objeto-exame-unidade-medida}/{codigoObjetoExame}
+      excluirObjetoExame: ${siscrim.rotas.objeto-exame-unidade-medida}/{codigoObjetoExame}
